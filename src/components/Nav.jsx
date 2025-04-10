@@ -20,7 +20,7 @@ function Nav() {
   ];
 
   return (
-    <div className="fixed flex flex-col items-center text-zinc-300/90 bottom-5 w-full z-50">
+    <nav className="fixed flex flex-col items-center text-zinc-300/90 bottom-5 w-full z-50">
       <div className="flex items-center justify-between px-5 w-92 h-16 backdrop-blur-lg rounded-full bg-black/20">
         {navItems.map((item) => (
           <a
@@ -39,7 +39,7 @@ function Nav() {
           </a>
         ))}
       </div>
-    </div>
+    </nav>
   );
 }
 

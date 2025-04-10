@@ -8,3 +8,9 @@ body{
   background-image: url('./assets/hex.gif');
   background-position: center;
 }
+
+.my-img{
+  background-image: url('./assets/myImg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -3,7 +3,6 @@ import devImg from "../assets/dev.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
-
 function Hero() {
   return (
     <div className="w-full bg-black text-white">
