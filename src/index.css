@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body{
+  font-family: poppins, sans-serif;
+}
+
+.binaryBG{
+  background-image: url('./assets/hex.gif');
+  background-position: center;
+}
