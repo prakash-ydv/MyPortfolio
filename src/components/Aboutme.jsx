@@ -18,7 +18,7 @@ function Aboutme() {
         {/* Boxes and text section */}
         <div className="flex flex-col items-center lg:items-start">
           {/* Boxes in a row */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full justify-items-center">
             <Box title="Academics" logo={<RiMedalFill />} />
             <Box title="Projects" logo={<IoRocket />} />
             <Box title="Codeability" logo={<FaCode />} />
@@ -30,7 +30,7 @@ function Aboutme() {
             doloremque eaque eius libero voluptates dolorem odit, animi
             voluptatem fugit nesciunt magnam delectus repudiandae soluta.
           </p>
-          <button className="h-12 w-22 bg-blue-600 rounded-md mt-5 text-black">Lets Talk</button>
+          <button className="h-10 w-26 bg-blue-600 rounded-md mt-5 text-black">Lets Talk</button>
         </div>
       </div>
     </section>
