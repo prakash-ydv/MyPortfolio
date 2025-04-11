@@ -6,7 +6,7 @@ import { IoRocket } from "react-icons/io5";
 
 function Aboutme() {
   return (
-    <section className="text-white pt-36 px-6 sm:px-10 flex flex-col items-center justify-center">
+    <section className="text-white mt-36 px-6 sm:px-10 flex flex-col items-center justify-center">
       <h5 className="text-zinc-400 text-sm font-semibold">Get to know</h5>
       <h1 className="text-3xl pt-4 text-blue-600 font-semibold">About Me</h1>
 
