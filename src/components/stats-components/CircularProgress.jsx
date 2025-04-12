@@ -35,7 +35,6 @@ const CircularProgress = ({ size = 105, strokeWidth = 5, percentage = 70 }) => {
         dy=".3em"
         fill="#155cfa"
         fontSize="20"
-        fontWeight="bold"
       >
         {percentage}%
       </text>

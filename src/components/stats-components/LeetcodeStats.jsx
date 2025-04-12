@@ -19,9 +19,19 @@ function LeetcodeStats() {
   }, []);
 
   const totalQuestions = 3511;
+  const totalEasy = 871;
+  const totalMedium = 1821;
+  const totalHard = 819;
+
   const solved = problemSolvingStats?.all || 0;
+  const solvedEasy = problemSolvingStats?.easy || 0;
+  const solvedMedium = problemSolvingStats?.medium || 0;
+  const solvedHard = problemSolvingStats?.hard || 0;
 
   const percentage = Number(((solved / totalQuestions) * 100).toFixed(2));
+  const percentageEasy = Number(((solvedEasy / totalEasy) * 100).toFixed(2));
+  const percentageMedium = Number(((solvedMedium / totalMedium) * 100).toFixed(2));
+  const percentageHard = Number(((solvedHard / totalHard) * 100).toFixed(2));
 
 
   return (
@@ -65,7 +75,7 @@ function LeetcodeStats() {
             </h5>
           </div>
           <HorizontalProgressBar
-            percentage={50}
+            percentage={percentageEasy}
             bgColor="#052e15"
             fillColor="#0bc953"
           />
@@ -82,7 +92,7 @@ function LeetcodeStats() {
             </h5>
           </div>
           <HorizontalProgressBar
-            percentage={50}
+            percentage={percentageMedium}
             bgColor="#443202"
             fillColor="#ebac00"
           />
@@ -97,7 +107,7 @@ function LeetcodeStats() {
             </h5>
           </div>
           <HorizontalProgressBar
-            percentage={7}
+            percentage={percentageHard}
             bgColor="#380a0a"
             fillColor="#df2828"
           />
