@@ -3,6 +3,7 @@ import devImg from "../assets/dev.png";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import Socialicons from "./hero-components/Socialicons";
 function Hero() {
   return (
     <section id="home" className="w-full bg-black text-white">
@@ -12,14 +13,18 @@ function Hero() {
         <h5 className="text-zinc-400 text-sm font-semibold">
           Software Engineer
         </h5>
+
         {/* buttons */}
         <div className="w-full flex gap-4 pt-10 items-center justify-center">
-          <button className="border border-blue-700 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 ">
+          <a className="center border border-blue-700 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 ">
             Download CV
-          </button>
-          <button className="bg-blue-600 rounded-md h-13 w-34 cursor-pointer text-black hover:bg-blue-100 hover:text-zinc-900 transition-colors duration-500">
+          </a>
+          <a
+            href="#contact"
+            className="center bg-blue-600 rounded-md h-13 w-34 cursor-pointer text-black hover:bg-blue-100 hover:text-zinc-900 transition-colors duration-500"
+          >
             Let's Talk
-          </button>
+          </a>
         </div>
 
         {/* hero img */}
@@ -33,14 +38,28 @@ function Hero() {
 
         {/* icons */}
         <div className="hidden sm:flex flex-col gap-6 items-center absolute left-16 bottom-5 text-blue-600 ">
-          <FaLinkedin className="cursor-pointer hover:text-zinc-300 transition-colors duration-500" />
-          <FaGithub className="cursor-pointer hover:text-zinc-300 transition-colors duration-500" />
-          <SiLeetcode className="cursor-pointer hover:text-zinc-300 transition-colors duration-500" />
+          {/* linkedIn */}
+          <Socialicons
+            url="https://www.linkedin.com/in/prakash-kumar-jh09/"
+            icon={<FaLinkedin />}
+          />
+
+          {/* github */}
+          <Socialicons
+            url="https://github.com/prakash-ydv"
+            icon={<FaGithub />}
+          />
+
+          {/* LeetCode */}
+          <Socialicons
+            url="https://leetcode.com/u/prakash___ydv/"
+            icon={<SiLeetcode />}
+          />
         </div>
 
         <a
           className="hidden sm:block rotate-90 text-sm absolute right-16 bottom-12 text-blue-600 hover:text-zinc-300 transition-colors duration-500"
-          href="#"
+          href="#contact"
         >
           Scroll Down
         </a>

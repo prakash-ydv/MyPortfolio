@@ -12,7 +12,6 @@ function Nav() {
 
   function clickHandler(id) {
     setActive(id);
-    scrollToSection(id);
   }
 
   const navItems = [

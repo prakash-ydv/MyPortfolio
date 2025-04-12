@@ -18,3 +18,9 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
