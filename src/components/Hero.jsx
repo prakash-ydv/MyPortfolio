@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 function Hero() {
   return (
-    <div className="w-full bg-black text-white">
+    <section id="home" className="w-full bg-black text-white">
       <div className="w-full flex flex-col items-center justify-center pt-30 gap-4">
         <h5 className="text-sm">Hello I'm</h5>
         <h1 className="font-semibold text-4xl">Prakash Kumar</h1>
@@ -45,7 +45,7 @@ function Hero() {
           Scroll Down
         </a>
       </div>
-    </div>
+    </section>
   );
 }
 

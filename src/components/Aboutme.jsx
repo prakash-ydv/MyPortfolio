@@ -7,7 +7,7 @@ import Heading from "./universal-components/Heading";
 
 function Aboutme() {
   return (
-    <section className="text-white mt-36 px-6 sm:px-10 flex flex-col items-center justify-center">
+    <section id="about" className="text-white mt-36 px-6 sm:px-10 flex flex-col items-center justify-center">
 
       <Heading subheading="Get to Know" heading="About Me"/>
 

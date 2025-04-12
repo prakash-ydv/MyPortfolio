@@ -5,7 +5,7 @@ import Heading from "./universal-components/Heading";
 
 function Stats() {
   return (
-    <section className="w-full flex flex-col mt-20 p-10">
+    <section id="stats" className="w-full flex flex-col mt-20 p-10">
 
       <Heading subheading ="Platforms I Use" heading="My Stats" />
 

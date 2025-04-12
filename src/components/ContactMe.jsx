@@ -8,7 +8,7 @@ import sendEmail from "./contactme-components/sendmail";
 function ContactMe() {
   const form = useRef();
   return (
-    <section className="flex flex-col w-full ">
+    <section id="contact" className="flex flex-col w-full ">
       <Heading subheading="Get In Touch" heading="Contact Me" />
 
       <div className="flex flex-col flex-wrap lg:flex-row w-full items-center lg:items-start justify-center gap-10 p-5 lg:p-10 lg:px-10">

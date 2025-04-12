@@ -10,13 +10,48 @@ import { LuBookMinus } from "react-icons/lu";
 function Nav() {
   const [active, setActive] = useState("home");
 
+  function clickHandler(id) {
+    setActive(id);
+    scrollToSection(id);
+  }
+
   const navItems = [
-    { id: "home", icon: <AiOutlineHome className="text-lg" />, title: "Home", link:"#home" },
-    { id: "about", icon: <CgProfile className="text-lg" />, title: "About", link:"#about" },
-    { id: "experience", icon: <LuBookMinus className="text-lg" />, title: "Experience", link:"#experience" },
-    { id: "stats", icon: <IoMdStats className="text-lg" />, title: "Stats", link:"#stats" },
-    { id: "projects", icon: <IoCodeSlash className="text-lg" />, title: "Projects", link:"#projects" },
-    { id: "contact", icon: <FiMessageSquare className="text-lg" />, title: "Contact", link:"#contact" },
+    {
+      id: "home",
+      icon: <AiOutlineHome className="text-lg" />,
+      title: "Home",
+      link: "#home",
+    },
+    {
+      id: "about",
+      icon: <CgProfile className="text-lg" />,
+      title: "About",
+      link: "#about",
+    },
+    {
+      id: "experience",
+      icon: <LuBookMinus className="text-lg" />,
+      title: "Experience",
+      link: "#experience",
+    },
+    {
+      id: "stats",
+      icon: <IoMdStats className="text-lg" />,
+      title: "Stats",
+      link: "#stats",
+    },
+    {
+      id: "projects",
+      icon: <IoCodeSlash className="text-lg" />,
+      title: "Projects",
+      link: "#projects",
+    },
+    {
+      id: "contact",
+      icon: <FiMessageSquare className="text-lg" />,
+      title: "Contact",
+      link: "#contact",
+    },
   ];
 
   return (
@@ -27,7 +62,7 @@ function Nav() {
             href={item.link}
             key={item.id}
             title={item.title}
-            onClick={() => setActive(item.id)}
+            onClick={() => clickHandler(item.id)}
             className={`flex items-center justify-center h-12 w-12 rounded-full transition-colors duration-300 cursor-pointer
               ${
                 active === item.id
