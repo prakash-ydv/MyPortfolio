@@ -3,12 +3,13 @@ import Box from "./about-components/Box";
 import { RiMedalFill } from "react-icons/ri";
 import { FaCode } from "react-icons/fa";
 import { IoRocket } from "react-icons/io5";
+import Heading from "./universal-components/Heading";
 
 function Aboutme() {
   return (
     <section className="text-white mt-36 px-6 sm:px-10 flex flex-col items-center justify-center">
-      <h5 className="text-zinc-400 text-sm font-semibold">Get to know</h5>
-      <h1 className="text-3xl pt-4 text-blue-600 font-semibold">About Me</h1>
+
+      <Heading subheading="Get to Know" heading="About Me"/>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 w-full max-w-6xl items-center">
         {/* Image section */}
