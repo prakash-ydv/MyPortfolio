@@ -35,7 +35,7 @@ function LeetcodeStats() {
 
 
   return (
-    <div className="flex flex-wrap w-[30rem] items-center rounded-b-3xl bg-zinc-800/50 border border-blue-600 hover:border-white hover:bg-black transition-colors duration-300 overflow-hidden">
+    <div className="flex flex-wrap w-[22rem] items-center rounded-b-3xl bg-zinc-800/50 border border-blue-600 hover:border-white hover:bg-black transition-colors duration-300 overflow-hidden">
       <div className="w-full h-24 flex items-center justify-center bg-blue-600 rounded-b-3xl gap-5">
         <img className="h-8" src={leetcodeLogo} />
         <h1 className="font-medium text-lg">LeetCode Stats</h1>

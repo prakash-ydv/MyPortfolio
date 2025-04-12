@@ -1,5 +1,6 @@
 import React from "react";
 import LeetcodeStats from "./stats-components/LeetcodeStats";
+import OtherStats from "./stats-components/OtherStats";
 
 function Stats() {
   return (
@@ -13,8 +14,10 @@ function Stats() {
 
       {/* stats */}
 
-      <div className="w-full flex flex-wrap items-center justify-center gap-5 ">
+      <div className="w-full h-fit flex flex-wrap items-center justify-center gap-5 lg:gap-10 ">
         <LeetcodeStats />
+        <OtherStats />
+        <OtherStats />
       </div>
     </section>
   );

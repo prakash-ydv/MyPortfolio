@@ -13,6 +13,10 @@ function App() {
       <Aboutme />
       <Experience />
       <Stats />
+
+      <div className='h-100'>
+        this is temp
+      </div>
     </div>
   )
 }
