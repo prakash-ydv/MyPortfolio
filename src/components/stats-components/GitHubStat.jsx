@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import StatBoxHead from "./mini-comps/StatBoxHead";
 import GitHubStreakCard from "./mini-comps/GitHubStreakCard";
 import GitHubStatCard from "./mini-comps/GitHubStatCard";
@@ -7,6 +7,7 @@ import GitHubLangCard from "./mini-comps/GitHubLangCard";
 function GitHubStat() {
   return (
     <div className="flex flex-wrap w-[22rem] items-center rounded-b-3xl bg-zinc-800/50 border border-purple-600 hover:border-white hover:bg-black transition-colors duration-300 overflow-hidden">
+      
       <StatBoxHead
         logo="https://pngimg.com/uploads/github/github_PNG80.png"
         heading="GitHub Stats"
