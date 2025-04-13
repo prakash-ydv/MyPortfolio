@@ -16,7 +16,7 @@ function Hero() {
 
         {/* buttons */}
         <div className="w-full flex gap-4 pt-10 items-center justify-center">
-          <a className="center border border-blue-700 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 ">
+          <a className="center border border-blue-600 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 ">
             Download CV
           </a>
           <a

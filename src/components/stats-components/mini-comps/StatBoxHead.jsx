@@ -15,7 +15,7 @@ function StatBoxHead(props) {
       'w-full h-24 flex items-center justify-center rounded-b-3xl gap-5',
       bgColorClass
     )}>
-      <img className="h-8" src={props.logo} />
+      <img alt='icon' className="h-8" src={props.logo} />
       <h1 className="font-medium text-lg">{props.heading}</h1>
     </div>
   );

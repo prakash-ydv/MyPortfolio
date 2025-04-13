@@ -17,7 +17,7 @@ function ExpBox(props) {
             <h1 className="leading-none font-semibold text-zinc-200">
               {element.title}
             </h1>
-            <h5 className="text-zinc-400 text-sm mt-2 ">{element.level}</h5>
+            <h5 className="text-zinc-500 text-sm mt-2 ">{element.level}</h5>
           </div>
         </div>
       ))}
