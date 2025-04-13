@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import leetcodeLogo from "../../assets/leetcode.webp";
-import CircularProgress from "./mini-comps/CircularProgress";
 import getGfgStats from "../../API/gfgAPI";
+import CircularProgress from "./mini-comps/CircularProgress";
 import StatProgressBar from "./mini-comps/StatProgressBar";
 import StatBoxHead from "./mini-comps/StatBoxHead";
 
@@ -11,7 +10,7 @@ function GfgStats() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getGfgStats("prakash___ydv");
+      const data = getGfgStats;
       setProblemSolvingStats({
         all: data.info.totalProblemsSolved,
         easy: data.solvedStats.easy.count,
