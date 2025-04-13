@@ -18,8 +18,8 @@ function StatProgressBar({
         </h1>
         <h5>
           {problemSolvingStats && problemSolvingStats[level]
-            ? `${problemSolvingStats[level]}/${totalProblems}`
-            : `0/${totalProblems}`}
+            ? `${problemSolvingStats[level]}${totalProblems > 0 ? `/${totalProblems}` : ''}`
+            : `0${totalProblems > 0 ? `/${totalProblems}` : ''}`}
         </h5>
       </div>
       <HorizontalProgressBar

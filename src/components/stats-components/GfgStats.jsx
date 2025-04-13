@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from "react";
 import leetcodeLogo from "../../assets/leetcode.webp";
 import CircularProgress from "./mini-comps/CircularProgress";
-import getLeetcodeStats from "../../API/LeetcodeStatsApi";
+import getGfgStats from "../../API/gfgAPI";
 import StatProgressBar from "./mini-comps/StatProgressBar";
 import StatBoxHead from "./mini-comps/StatBoxHead";
 
-function LeetcodeStats() {
+function GfgStats() {
   const [problemSolvingStats, setProblemSolvingStats] = useState({});
   const [rank, setRank] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getLeetcodeStats("prakash___ydv");
-      setProblemSolvingStats(data.problemSolvingStats);
-      setRank(data.ranking);
+      const data = await getGfgStats("prakash___ydv");
+      setProblemSolvingStats({
+        all: data.info.totalProblemsSolved,
+        easy: data.solvedStats.easy.count,
+        medium: data.solvedStats.medium.count,
+        hard: data.solvedStats.hard.count,
+      });
+      setRank(data.info.instituteRank);
     };
 
     fetchData();
   }, []);
 
   const totalQuestions = 3511;
-  const totalEasy = 871;
-  const totalMedium = 1821;
-  const totalHard = 819;
+  const totalEasy = 0;
+  const totalMedium = 0;
+  const totalHard = 0;
 
   const solved = problemSolvingStats?.all || 0;
   const solvedEasy = problemSolvingStats?.easy || 0;
@@ -34,9 +39,8 @@ function LeetcodeStats() {
   const percentage = Number(((solved / totalQuestions) * 100).toFixed(2));
 
   return (
-    <div className="flex flex-wrap w-[22rem] items-center rounded-b-3xl bg-zinc-800/50 border border-blue-600 hover:border-white hover:bg-black transition-colors duration-300 overflow-hidden">
-      
-      <StatBoxHead logo={leetcodeLogo} heading="LeetCode Stats" bg="blue" />
+    <div className="flex flex-wrap w-[22rem] items-center rounded-b-3xl bg-zinc-800/50 border border-green-600 hover:border-white hover:bg-black transition-colors duration-300 overflow-hidden">
+      <StatBoxHead logo="https://media.geeksforgeeks.org/wp-content/uploads/20210628182253/gfglogo.png" heading="GFG Stats" bg="green" />
 
       {/* main stats */}
 
@@ -48,7 +52,7 @@ function LeetcodeStats() {
         {/* rank */}
         <div className="w-full flex items-center justify-between mt-5">
           <span className="flex gap-2 text-white text-lg">
-            Solved
+            Solved{" "}
             <h5 className="text-emerald-300">
               {problemSolvingStats.all ? problemSolvingStats.all : 0}
             </h5>
@@ -98,4 +102,4 @@ function LeetcodeStats() {
   );
 }
 
-export default LeetcodeStats;
+export default GfgStats;

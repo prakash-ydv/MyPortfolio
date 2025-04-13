@@ -2,6 +2,7 @@ import React from "react";
 import LeetcodeStats from "./stats-components/LeetcodeStats";
 import OtherStats from "./stats-components/OtherStats";
 import Heading from "./universal-components/Heading";
+import GfgStats from "./stats-components/GfgStats";
 
 function Stats() {
   return (
@@ -13,7 +14,7 @@ function Stats() {
 
       <div className="w-full h-fit flex flex-wrap items-center justify-center gap-5 lg:gap-10 ">
         <LeetcodeStats />
-        <OtherStats />
+        <GfgStats />
         <OtherStats />
       </div>
     </section>
