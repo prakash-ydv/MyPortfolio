@@ -9,6 +9,7 @@ import Experience from "./components/Experience";
 import Stats from "./components/Stats";
 import ContactMe from "./components/ContactMe";
 import Projects from "./components/Projects";
+import GitHubStat from "./components/stats-components/GitHubStat";
 
 function App() {
   return (

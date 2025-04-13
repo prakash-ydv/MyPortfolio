@@ -7,6 +7,7 @@ function StatBoxHead(props) {
     red: 'bg-red-600',
     blue: 'bg-blue-600',
     yellow: 'bg-yellow-600',
+    purple : 'bg-purple-600'
   }[props.bg] || 'bg-gray-600';
 
   return (
