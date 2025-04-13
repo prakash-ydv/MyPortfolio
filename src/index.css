@@ -5,6 +5,7 @@ html {
 }
 
 body{
+  cursor: url('/src/assets/cursor.png') 8 8 ,auto;
   font-family: poppins, sans-serif;
 }
 
