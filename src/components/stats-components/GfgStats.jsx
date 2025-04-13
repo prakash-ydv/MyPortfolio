@@ -24,10 +24,10 @@ function GfgStats() {
     fetchData();
   }, []);
 
-  const totalQuestions = 3511;
-  const totalEasy = 0;
-  const totalMedium = 0;
-  const totalHard = 0;
+  const totalQuestions = 3000;
+  const totalEasy = 1000;
+  const totalMedium =1500 ;
+  const totalHard = 500;
 
   const solved = problemSolvingStats?.all || 0;
   const solvedEasy = problemSolvingStats?.easy || 0;
