@@ -8,6 +8,7 @@ import Aboutme from "./components/Aboutme";
 import Experience from "./components/Experience";
 import Stats from "./components/Stats";
 import ContactMe from "./components/ContactMe";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
       <Aboutme />
       <Experience />
       <Stats />
+      <Projects />
       <ContactMe />
 
-      <div className="h-100">this is temp</div>
+      <div className="h-25"></div>
     </div>
   );
 }
