@@ -13,7 +13,10 @@ import GitHubStat from "./components/stats-components/GitHubStat";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-black ">
+
+      <div className="mainbody">
+
       <ToastContainer />
       <Nav />
       <Hero />
@@ -22,6 +25,7 @@ function App() {
       <Stats />
       <Projects />
       <ContactMe />
+      </div>
 
       <div className="h-25"></div>
     </div>

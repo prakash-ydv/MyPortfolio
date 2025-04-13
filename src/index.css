@@ -8,7 +8,9 @@ body{
   cursor: url('/src/assets/cursor.png') 8 8 ,auto;
   font-family: poppins, sans-serif;
 }
-
+.mainbody{
+  animation: fadeSlide 1s ease-in;
+}
 .binaryBG{
   background-image: url('./assets/hex.gif');
   background-position: center;
@@ -24,4 +26,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes fadeSlide{
+  from {opacity: 0; transform:  translateY(20px) ;}
+  to {opacity: 1; transform:  translateY(0) ;}
 }
