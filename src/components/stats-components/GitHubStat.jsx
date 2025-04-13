@@ -16,7 +16,7 @@ function GitHubStat() {
 
       {/* main stats */}
 
-      <div className="w-full h-[30rem] flex flex-col items-center mt-10 mb-5 p-5">
+      <div className="w-full h-[30rem]  lg:h-[33rem] flex flex-col items-center mt-10 mb-5 p-5">
         <div className="grid grid-cols-1 h-full w-full max-w-6xl">
           {/* streak card */}
           <GitHubStreakCard />

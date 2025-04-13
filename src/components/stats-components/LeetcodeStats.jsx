@@ -40,7 +40,7 @@ function LeetcodeStats() {
 
       {/* main stats */}
 
-      <div className="w-full h-[30rem] flex flex-col items-center mt-10 mb-5 p-5 lg:p-10">
+      <div className="w-full h-[30rem] lg:h-[33rem] flex flex-col items-center mt-10 mb-5 p-5 lg:p-10">
         {problemSolvingStats?.all && (
           <CircularProgress percentage={percentage ? percentage : 0} />
         )}

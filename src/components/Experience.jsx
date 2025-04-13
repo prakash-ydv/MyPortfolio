@@ -6,7 +6,7 @@ const {frontendList, backendList, othersList} = skills;
 
 function Experience() {
   return (
-    <section id="experience" className="mt-36 flex flex-col items-center text-white">
+    <section id="experience" className="mt-28 flex flex-col items-center text-white">
 
       <Heading subheading="Skills I Have" heading="My Experience" />
 

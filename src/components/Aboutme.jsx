@@ -10,7 +10,7 @@ function Aboutme() {
   return (
     <section
       id="about"
-      className="text-white mt-36 px-6 sm:px-10 center flex-col "
+      className="text-white mt-28 px-6 sm:px-10 center flex-col "
     >
       <Heading subheading="Get to Know" heading="About Me" />
 
