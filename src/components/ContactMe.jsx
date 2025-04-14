@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Heading from "./universal-components/Heading";
 import ContactBox from "./contactme-components/ContactBox";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -7,13 +7,29 @@ import sendEmail from "./contactme-components/sendmail";
 
 function ContactMe() {
   const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isSubmitting) return; // Prevent multiple clicks
+    setIsSubmitting(true);
+
+    try {
+      await sendEmail(e, form); // Call your email sending function
+      form.current.reset(); // Clear form on success
+    } catch (error) {
+      console.error("Failed to send email:", error);
+    } finally {
+      setTimeout(() => setIsSubmitting(false), 3000); // Delay re-enable
+    }
+  };
+
   return (
     <section id="contact" className="flex flex-col mt-28 w-full ">
       <Heading subheading="Get In Touch" heading="Contact Me" />
 
       <div className="flex flex-col flex-wrap lg:flex-row w-full items-center lg:items-start justify-center gap-10 p-5 lg:p-10 lg:px-10">
         <div className="flex flex-col gap-5 px-10  md:w-[25vw]">
-          {/* LinkedIn */}
           <ContactBox
             platform="LinkedIn"
             username="Prakash Kumar"
@@ -21,8 +37,6 @@ function ContactMe() {
             url="https://www.linkedin.com/in/prakash-kumar-jh09/"
             say="View Profile"
           />
-
-          {/* Github */}
           <ContactBox
             platform="GitHub"
             username="prakash-ydv"
@@ -30,8 +44,6 @@ function ContactMe() {
             url="https://github.com/prakash-ydv"
             say="View Profile"
           />
-
-          {/* Email */}
           <ContactBox
             platform="Email"
             username="mailtoprakashydv@gmail.com"
@@ -39,8 +51,6 @@ function ContactMe() {
             url="mailto:mailtoprakashydv@gmail.com"
             say="Send E-Mail"
           />
-
-          {/* WhatsApp */}
           <ContactBox
             platform="WhatsApp"
             username="+91 82109 18083"
@@ -53,7 +63,7 @@ function ContactMe() {
         <form
           className="flex flex-col gap-5 h-full sm:w-[50vw] items-start justify-center text-yellow-600"
           ref={form}
-          onSubmit={(e)=>(sendEmail(e, form))}
+          onSubmit={handleSubmit}
         >
           <input
             placeholder="Your Full Name"
@@ -77,9 +87,12 @@ function ContactMe() {
             required
           />
           <input
-            className="bg-blue-600 hover:bg-blue-800 p-2 lg:p-4 cursor-pointer rounded-lg text-sm text-black"
+            className={`bg-blue-600 hover:bg-blue-800 p-2 lg:p-4 rounded-lg text-sm text-black ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+            }`}
             type="submit"
-            value="Send Message"
+            value={isSubmitting ? "Sending..." : "Send Message"}
+            disabled={isSubmitting}
           />
         </form>
       </div>
