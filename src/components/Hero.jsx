@@ -1,5 +1,6 @@
 import React from "react";
 import devImg from "../assets/dev.png";
+import hexAnimation from "../assets/hexBg.mp4";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
@@ -16,7 +17,11 @@ function Hero() {
 
         {/* buttons */}
         <div className="w-full flex gap-4 pt-10 items-center justify-center">
-          <a className="center border border-blue-600 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 ">
+          <a
+            target="_black"
+            href="https://drive.google.com/file/d/1LhAeMlBypINjyKoz_HqCRIJjguG_xB9B/view?usp=sharing"
+            className="center border border-blue-600 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 "
+          >
             Download CV
           </a>
           <a
@@ -28,9 +33,20 @@ function Hero() {
         </div>
 
         {/* hero img */}
-        <div className="flex w-82 h-146 mt-10 binaryBG overflow-none rounded-full relative">
+        <div className="flex w-82 h-146 mt-10 overflow-hidden rounded-full relative">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute w-full h-full object-cover top-0 left-0 rounded-full z-0"
+          >
+            <source src={hexAnimation} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
           <img
-            className="absolute w-78 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            className="absolute w-78 left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
             src={devImg}
             alt="dev"
           />
