@@ -4,12 +4,12 @@ const getGfgStats ={
     "fullName": "Prakash Kumar",
     "profilePicture": "https://media.geeksforgeeks.org/auth/profile/lpie96429zwc9r53aj45",
     "institute": "IES College of Technology Bhopal",
-    "instituteRank": 59,
-    "currentStreak": 95,
-    "maxStreak": 1350,
-    "codingScore": 512,
-    "monthlyScore": 48,
-    "totalProblemsSolved": 142
+    "instituteRank": 55,
+    "currentStreak": 98,
+    "maxStreak": 1352,
+    "codingScore": 528,
+    "monthlyScore": 64,
+    "totalProblemsSolved": 145
   },
   "solvedStats": {
     "easy": {
@@ -19,10 +19,10 @@ const getGfgStats ={
       "count": 11
     },
     "medium": {
-      "count": 68
+      "count": 70
     },
     "hard": {
-      "count": 19
+      "count": 10
     }
   }
 };
