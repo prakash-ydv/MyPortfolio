@@ -25,7 +25,7 @@ function Aboutme() {
             <Box title="Academics" detail="Good" logo={<RiMedalFill />} />
             <Box title="Projects" detail="4+ Projects" logo={<IoRocket />} />
             <Box title="Codeability" detail="10K+ LOC" logo={<FaCode />} />
-            <Box title="Client Rating" detail="10/10 ( 1 )" logo={<FaStar />} />
+            <Box title="Client Rating" detail="9.5/10 ( 2 )" logo={<FaStar />} />
           </div>
 
           {/* Paragraph */}
