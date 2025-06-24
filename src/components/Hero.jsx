@@ -19,7 +19,7 @@ function Hero() {
         <div className="w-full flex gap-4 pt-10 items-center justify-center">
           <a
             target="_black"
-            href="https://drive.google.com/file/d/1LhAeMlBypINjyKoz_HqCRIJjguG_xB9B/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ZJkL-4iilzWDbCfzVmraHH3Uz5W_tNw5/view?usp=sharing"
             className="center border border-blue-600 rounded-md h-13 w-34 text-blue-600 cursor-pointer hover:bg-blue-100  hover:text-zinc-900 transition-colors duration-500 "
           >
             Download CV
